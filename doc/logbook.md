@@ -53,7 +53,7 @@ On the technical front, my brother and I discussed the possibility of him assist
 ## 3. Training Data Selection
 **Date: 25/09/2023**
 
-Today, I commenced the data selection process for the project. My first task was to discern the data that resonates best with the project's objectives. Given that our total dataset comprises of [X,000 images spanning various scenarios], I meticulously examined it to cherry-pick the images that align most closely with the project.
+Today, I commenced the data selection process for the project. My first task was to discern the data that resonates best with the project's objectives. Given that our total dataset comprises of [100 images spanning various scenarios], I meticulously examined it to cherry-pick the images that align most closely with the project.
 
 To facilitate this, I devised a random [sampling tool](../tools/randomImages.py) that would earmark approximately 100 images from the dataset. These images will serve as the foundation for training, validating and testing the YOLOv8 model. Given the project's evolving nature, I'm keeping options open to expand this image set in the future.
 
