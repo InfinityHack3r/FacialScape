@@ -10,6 +10,8 @@ This project delves into the intricate world of image analytics, focusing on ext
 
 **Project name:** [FacialScape](https://github.com/InfinityHack3r/FacialScape/)
 
+**Data Set:** [Kaggle](https://www.kaggle.com/datasets/jessicali9530/lfw-dataset)
+
 **Language:** [Python](https://www.python.org/) 
 
 **Libraries:** 
@@ -20,6 +22,8 @@ This project delves into the intricate world of image analytics, focusing on ext
 - [Docker](https://www.docker.com/)
 
 - [YOLOv8](https://docs.ultralytics.com/)
+
+- [labelImg](https://github.com/HumanSignal/label-studio)
 
 <br>
 

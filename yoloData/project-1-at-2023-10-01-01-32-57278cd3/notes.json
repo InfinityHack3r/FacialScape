@@ -1,0 +1,185 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Age Group: Adult"
+    },
+    {
+      "id": 1,
+      "name": "Age Group: Child"
+    },
+    {
+      "id": 2,
+      "name": "Age Group: Middle Aged"
+    },
+    {
+      "id": 3,
+      "name": "Age Group: Senior"
+    },
+    {
+      "id": 4,
+      "name": "Age Group: Teen"
+    },
+    {
+      "id": 5,
+      "name": "Age Group: Young Adult"
+    },
+    {
+      "id": 6,
+      "name": "Ears: Left"
+    },
+    {
+      "id": 7,
+      "name": "Ears: Right"
+    },
+    {
+      "id": 8,
+      "name": "Expression: Anger"
+    },
+    {
+      "id": 9,
+      "name": "Expression: Contempt"
+    },
+    {
+      "id": 10,
+      "name": "Expression: Disgust"
+    },
+    {
+      "id": 11,
+      "name": "Expression: Fear"
+    },
+    {
+      "id": 12,
+      "name": "Expression: Happy"
+    },
+    {
+      "id": 13,
+      "name": "Expression: Lust"
+    },
+    {
+      "id": 14,
+      "name": "Expression: Neutral"
+    },
+    {
+      "id": 15,
+      "name": "Expression: Sadness"
+    },
+    {
+      "id": 16,
+      "name": "Expression: Surprise"
+    },
+    {
+      "id": 17,
+      "name": "Eye: Left"
+    },
+    {
+      "id": 18,
+      "name": "Eye: Right"
+    },
+    {
+      "id": 19,
+      "name": "Eyebrows: Left"
+    },
+    {
+      "id": 20,
+      "name": "Eyebrows: Right"
+    },
+    {
+      "id": 21,
+      "name": "Facial Hair: Beard"
+    },
+    {
+      "id": 22,
+      "name": "Facial Hair: Goatee"
+    },
+    {
+      "id": 23,
+      "name": "Facial Hair: Mustache"
+    },
+    {
+      "id": 24,
+      "name": "Facial Hair: Not Visible"
+    },
+    {
+      "id": 25,
+      "name": "Gender: Female"
+    },
+    {
+      "id": 26,
+      "name": "Gender: Male"
+    },
+    {
+      "id": 27,
+      "name": "Hair: Black"
+    },
+    {
+      "id": 28,
+      "name": "Hair: Blonde"
+    },
+    {
+      "id": 29,
+      "name": "Hair: Brown"
+    },
+    {
+      "id": 30,
+      "name": "Hair: Grey"
+    },
+    {
+      "id": 31,
+      "name": "Hair: Not Visible"
+    },
+    {
+      "id": 32,
+      "name": "Hair: Other"
+    },
+    {
+      "id": 33,
+      "name": "Hair: Red"
+    },
+    {
+      "id": 34,
+      "name": "Hair: White"
+    },
+    {
+      "id": 35,
+      "name": "Mouth: Not Visible"
+    },
+    {
+      "id": 36,
+      "name": "Mouth: Visible"
+    },
+    {
+      "id": 37,
+      "name": "Nose: Not Visible"
+    },
+    {
+      "id": 38,
+      "name": "Nose: Visible"
+    },
+    {
+      "id": 39,
+      "name": "Skin: Black"
+    },
+    {
+      "id": 40,
+      "name": "Skin: Brown"
+    },
+    {
+      "id": 41,
+      "name": "Skin: Other"
+    },
+    {
+      "id": 42,
+      "name": "Skin: White"
+    },
+    {
+      "id": 43,
+      "name": "Skin: Yellow"
+    }
+  ],
+  "info": {
+    "year": 2023,
+    "version": "1.0",
+    "contributor": "Label Studio"
+  }
+}
