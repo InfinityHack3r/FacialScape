@@ -62,3 +62,9 @@ The next phase involves annotation. I've zeroed in on [Roboflow](https://roboflo
 I'm currently weighing the pros and cons of training venues. While Google Colab emerged as an initial option, I'm wary of its limited resource time limits. I'm toying with the idea of harnessing the power of my local GPU (RTX 3090) for this task. For context, my machine is equipped with [448 GB RAM, Intel Xeon E5-2667 v3 @ 3.20 GHz (2 Processors)]. In the coming days, I'll be dissecting the cost-benefit analysis of training on Google Colab vis-à-vis my local machine and or buying a pro membership for google Colab to remove the time limits.
 
 Should neither prove feasible, I'm considering using a pretrained model from hugging face this option would be a devestating blow to the project's scope and objectives. Nonetheless, I'm keeping this option open as a last resort.
+
+
+## 4. Training Data Annotation
+**Date: 2/10/2023**
+
+Today, I commenced the data annotation process for the project. I've decided to use  for this task. With Roboflow, I can adeptly annotate these images and more crucially, export these annotations in the YOLO-specific format. I will get my family into assisting me with this task. I'm confident that with their help, I can complete this process in a timely manner.
