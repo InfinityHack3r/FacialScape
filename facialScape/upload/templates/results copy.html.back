@@ -1,18 +1,63 @@
-<!-- File location: myapp/templates/results.html -->
+{% load custom_tags %}
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Analysis Results</title>
 </head>
 <body>
-    <h1>Individual and Average Analysis Results:</h1>
-    {% for fig_html in figs %}
-        {{ fig_html|safe }}
-        <p>{{ age }}</body>p>
+    <h1>Analysis Results</h1>
+    <p>Total Images: {{ total_images }}</p>
+    <p>Analyzed Images: {{ analyzed_images }}</p>
+    <p>Average Age: {{ avg_age }}</p>
+    <p>Average Male Age: {{ avg_male_age }}</p>
+    <p>Average Female Age: {{ avg_female_age }}</p>
+    <p>Primary Gender: {{ primary_gender }}</p>
+    <p>Total Males: {{ male_count }}</p>
+    <p>Total Females: {{ female_count }}</p>
+    <p>Primary Emotion: {{ primary_emotion }}</p>
+    <p>Primary Emotion (Male): {{ primary_male_emotion }}</p>
+    <p>Primary Emotion (Female): {{ primary_female_emotion }}</p>
+    <p>Primary Race: {{ primary_race }}</p>
+    <p>Primary Race (Male): {{ primary_male_race }}</p>
+    <p>Primary Race (Female): {{ primary_female_race }}</p>
+
+
+    {{ fig_age_html | safe }}
+    {{ fig_gender_html | safe }}
+    {{ fig_emotion_html | safe }}
+    {{ fig_race_html | safe }}
+
+    <div class="individual-analysis">
+        {% for img_path, analysis_list in analysis_data.items %}
+        {% if analysis_list and analysis_list|length > 0 %}
+            {% with analysis=analysis_list.0 %}
+                {% with chart_data=individual_charts_data|get_item:img_path %}
+                    <div class="image-analysis">
+                        <h2>Image: {{ img_path }}</h2>
+                        <img src="/{{ img_path }}" alt="Analyzed image">
+                        <p>Age: {{ analysis.age }}</p>
+                        <div class="age-chart">
+                            {{ chart_data.individual_fig_age_html|safe }}
+                        </div>
+                        <p>Gender: {{ analysis.dominant_gender }}</p>
+                        <div class="gender-chart">
+                            {{ chart_data.individual_fig_gender_html|safe }}
+                        </div>
+                        <p>Emotion: {{ analysis.dominant_emotion }}</p>
+                        <div class="emotion-chart">
+                            {{ chart_data.individual_fig_emotion_html|safe }}
+                        </div>
+                        <p>Race: {{ analysis.dominant_race }}</p>
+                        <div class="race-chart">
+                            {{ chart_data.individual_fig_race_html|safe }}
+                        </div>
+                    </div>
+                {% endwith %}
+            {% endwith %}
+        {% endif %}
     {% endfor %}
-    <h2>Average Age:</h2>
-    <p>{{ avg_age }}</p>
-    <h2>Gender Distribution:</h2>
-    <p>{{ avg_gender }}</p>
+</div>
+</div>
 </body>
 </html>
