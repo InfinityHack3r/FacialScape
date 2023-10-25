@@ -65,44 +65,34 @@
             {{ fig_gender_html | safe }}
             {{ fig_emotion_html | safe }}
             {{ fig_race_html | safe }}
+        
+        <div class="individual-analysis">
+            {% for img_path, analysis_list in analysis_data.items %}
+            {% if analysis_list and analysis_list|length > 0 %}
+                {% with analysis=analysis_list.0 %}
+                    <div class="image-analysis">
+                        <h2>Image: {{ img_path }}</h2>
+                        <img src="/{{ img_path }}" alt="Analyzed image">
+                        <p>Age: {{ analysis.age }}</p>
+                        <div class="age-chart">
+                            {{ individual_fig_age_html|safe }}
+                        </div>
+                        <p>Gender: {{ analysis.dominant_gender }}</p>
+                        <div class="gender-chart">
+                            {{ individual_fig_gender_html|safe }}
+                        </div>
+                        <p>Emotion: {{ analysis.dominant_emotion }}</p>
+                        <div class="emotion-chart">
+                            {{ individual_fig_emotion_html|safe }}
+                        </div>
+                        <p>Race: {{ analysis.dominant_race }}</p>
+                        <div class="race-chart">
+                            {{ individual_fig_race_html|safe }}
+                        </div>
+                    </div>
+                {% endwith %}
+            {% endif %}
+        {% endfor %}
         </div>
-        <h1>Images Analyzed</h1>
-        <div class="images-section">
-            <div class="images-container">
-                {% for img_path, analysis_list in analysis_data.items %}
-                {% if analysis_list and analysis_list|length > 0 %}
-                    {% with analysis=analysis_list.0 %}
-                        {% with chart_data=individual_charts_data|get_item:img_path %}
-                            <div class="image-card">
-                                <div class="image-info">
-                                    <h2 class="image-name">Image: {{ img_path }}</h2>
-                                    <img src="/{{ img_path }}" alt="Analyzed image" class="image-thumbnail">
-                                    <span class="image-detail">Age: {{ analysis.age }}</span>
-                                    <span class="image-detail">Gender: {{ analysis.dominant_gender }}</span>
-                                    <span class="image-detail">Primary Emotion: {{ analysis.dominant_emotion }}</span>
-                                    <span class="image-detail">Primary Race: {{ analysis.dominant_race }}</span>
-                                </div>
-                                <div class="image-charts">
-                                    <div class="image-chart age-chart">
-                                        {{ chart_data.individual_fig_age_html|safe }}
-                                    </div>
-                                    <div class="image-chart gender-chart">
-                                        {{ chart_data.individual_fig_gender_html|safe }}
-                                    </div>
-                                    <div class="image-chart emotion-chart">
-                                        {{ chart_data.individual_fig_emotion_html|safe }}
-                                    </div>
-                                    <div class="image-chart race-chart">
-                                        {{ chart_data.individual_fig_race_html|safe }}
-                                    </div>
-                                </div>
-                            </div>
-                        {% endwith %}
-                    {% endwith %}
-                {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+        </body>
+        </html>

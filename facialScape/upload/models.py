@@ -14,3 +14,4 @@ class ImageAnalysis(models.Model):
     image_hash = models.CharField(max_length=32, unique=True)  # A hash of the image file to check for duplicates
     analysis_data = models.JSONField(null=True, blank=True)  # Analysis data for this image
     webp_image_path = models.FilePathField(path=settings.MEDIA_ROOT)  # Path to the webp version of this image
+ 
