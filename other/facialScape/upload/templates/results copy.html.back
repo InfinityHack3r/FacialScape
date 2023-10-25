@@ -1,0 +1,18 @@
+<!-- File location: myapp/templates/results.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Individual and Average Analysis Results:</h1>
+    {% for fig_html in figs %}
+        {{ fig_html|safe }}
+        <p>{{ age }}</body>p>
+    {% endfor %}
+    <h2>Average Age:</h2>
+    <p>{{ avg_age }}</p>
+    <h2>Gender Distribution:</h2>
+    <p>{{ avg_gender }}</p>
+</body>
+</html>

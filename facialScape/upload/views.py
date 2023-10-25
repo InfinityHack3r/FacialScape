@@ -139,7 +139,7 @@ def display_results(request, analysis_results_id):
     
     
     
-    for analysis_list in analysis_data.items():
+    for img_path, analysis_list in analysis_data.items():
         if analysis_list and isinstance(analysis_list[0], dict):
             analysis = analysis_list[0]
             
