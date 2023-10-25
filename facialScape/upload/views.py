@@ -162,26 +162,33 @@ def display_results(request, analysis_results_id):
 
     individual_charts_data = {}  # Dictionary to hold all charts data for each image
 
-    for image_path, data in analysis_data.items():
-        analysis = data[0]  # Assuming the analysis data is the first item in the list
+    for image_path, analysis_list in analysis_data.items():
+        if analysis_list and isinstance(analysis_list[0], dict):
+            analysis = analysis_list[0]
 
-        # Age Chart
-        individual_fig_age = px.bar(x=['Age'], y=[analysis['age']], title=f'Age for {image_path}', height=400)
-        individual_fig_age_html = pio.to_html(individual_fig_age, full_html=False)
+            # Generate the charts for this analysis
+            individual_fig_age = px.bar(x=['Age'], y=[analysis['age']], title=f'Age for {image_path}', height=400)
+            individual_fig_age_html = pio.to_html(individual_fig_age, full_html=False)
 
-        # Gender Chart
-        individual_fig_gender = px.pie(values=[1], names=[analysis['dominant_gender']], title=f'Gender for {image_path}')
-        individual_fig_gender_html = pio.to_html(individual_fig_gender, full_html=False)
+            individual_fig_gender = px.pie(values=[1], names=[analysis['dominant_gender']], title=f'Gender for {image_path}')
+            individual_fig_gender_html = pio.to_html(individual_fig_gender, full_html=False)
 
-        # Emotion Chart
-        emotions = analysis['emotion']
-        individual_fig_emotion = px.bar(x=list(emotions.keys()), y=list(emotions.values()), title=f'Emotions for {image_path}', height=400)
-        individual_fig_emotion_html = pio.to_html(individual_fig_emotion, full_html=False)
+            emotions = analysis['emotion']
+            individual_fig_emotion = px.bar(x=list(emotions.keys()), y=list(emotions.values()), title=f'Emotions for {image_path}', height=400)
+            individual_fig_emotion_html = pio.to_html(individual_fig_emotion, full_html=False)
 
-        # Race Chart
-        races = analysis['race']
-        individual_fig_race = px.bar(x=list(races.keys()), y=list(races.values()), title=f'Races for {image_path}', height=400)
-        individual_fig_race_html = pio.to_html(individual_fig_race, full_html=False)
+            races = analysis['race']
+            individual_fig_race = px.bar(x=list(races.keys()), y=list(races.values()), title=f'Races for {image_path}', height=400)
+            individual_fig_race_html = pio.to_html(individual_fig_race, full_html=False)
+
+            # Store the chart HTML strings in the analysis_data dictionary
+            analysis_data[image_path].append({
+                'fig_age_html': individual_fig_age_html,
+                'fig_gender_html': individual_fig_gender_html,
+                'fig_emotion_html': individual_fig_emotion_html,
+                'fig_race_html': individual_fig_race_html
+            })
+
 
 
 
