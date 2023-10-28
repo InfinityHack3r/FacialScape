@@ -1,0 +1,98 @@
+{% load custom_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Results</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+ 
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Facial Scape - Analysis Results</h1>
+            <!-- ... other header content ... -->
+        </header>
+        <div class="statistics-section">
+            <div class="statistics-container">
+                <div class="statistic-card">
+                    <span class="statistic-title">Average Age</span>
+                    <div class="statistic-value-container">
+                        <span class="statistic-value">{{ avg_age }}</span>
+                        <span class="statistic-unit"> Years</span>
+                    </div>
+                    <div class="statistic-details">
+                        <span class="statistic-detail">✔ Male Average: {{ avg_male_age }}</span>
+                        <span class="statistic-detail">✔ Female Average: {{ avg_female_age }} </span>
+                    </div>
+                </div>
+                <div class="statistic-card">
+                    <span class="statistic-title">Primary Gender</span>
+                    <div class="statistic-value-container">
+                        <span class="statistic-value">{{ primary_gender }}</span>
+                    </div>
+                    <div class="statistic-details">
+                        <span class="statistic-detail">✔ Male Total: {{ male_count }} </span>
+                        <span class="statistic-detail">✔ Female Total: {{ female_count }} </span>
+                    </div>
+                </div>
+                <div class="statistic-card">
+                    <span class="statistic-title">Primary Emotion</span>
+                    <div class="statistic-value-container">
+                        <span class="statistic-value">{{ primary_emotion }}</span>
+                    </div>
+                    <div class="statistic-details">
+                        <span class="statistic-detail">✔ Male Emotion: {{ primary_male_emotion }}</span>
+                        <span class="statistic-detail">✔ Female Emotion: {{ primary_female_emotion }} </span>
+                    </div>
+                </div>
+                <div class="statistic-card">
+                    <span class="statistic-title">Primary Race</span>
+                    <div class="statistic-value-container">
+                        <span class="statistic-value">{{ primary_race }}</span>
+                    </div>
+                    <div class="statistic-details">
+                        <span class="statistic-detail">✔ Male Race: {{ primary_male_race }}</span>
+                        <span class="statistic-detail">✔ Female Race: {{ primary_female_race }} </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1>Charts</h1>
+        <div class="charts-section">
+            {{ fig_age_html | safe }}
+            {{ fig_gender_html | safe }}
+            {{ fig_emotion_html | safe }}
+            {{ fig_race_html | safe }}
+        
+        <div class="individual-analysis">
+        {% for img_path, analysis_list in analysis_data.items %}
+            {% if analysis_list and analysis_list|length > 1 %}
+                {% with analysis=analysis_list.0 charts=analysis_list.1 %}
+                    <div class="image-analysis">
+                        <h2>Image: {{ img_path }}</h2>
+                        <img src="/{{ img_path }}" alt="Analyzed image">
+                        <p>Age: {{ analysis.age }}</p>
+                        <div class="age-chart">
+                            {{ charts.fig_age_html|safe }}
+                        </div>
+                        <p>Gender: {{ analysis.dominant_gender }}</p>
+                        <div class="gender-chart">
+                            {{ charts.fig_gender_html|safe }}
+                        </div>
+                        <p>Emotion: {{ analysis.dominant_emotion }}</p>
+                        <div class="emotion-chart">
+                            {{ charts.fig_emotion_html|safe }}
+                        </div>
+                        <p>Race: {{ analysis.dominant_race }}</p>
+                        <div class="race-chart">
+                            {{ charts.fig_race_html|safe }}
+                        </div>
+                    </div>
+                {% endwith %}
+            {% endif %}
+        {% endfor %}
+        </div>
+        </body>
+        </html>
