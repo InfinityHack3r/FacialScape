@@ -72,19 +72,58 @@ This project serves as the Capstone for the "Software Technology 1 (4483)" cours
 ---
 ## 📈 **Development**
 
-> **⚠️ Project state:**  🚩 In development
+> **⚠️ Project state:**  🚩 Alpha
 
 **Current Version:** 
-- v0.0.0
+- v0.1.0
 
  **Phase:**
- - 🚩 Planning
+ - 🚩 First Phase
 
 
 
 **Documentation:**
-- [Todo List](./docs/todo.md): Check to see the current workings and future plans.
-- [Change Log](./docs/changelog.md): Stay updated with the latest changes and improvements in the project.
+- [Todo List](./doc/todo.md): Check to see the current workings and future plans.
+- [Change Log](./doc/changelog.md): Stay updated with the latest changes and improvements in the project.
 
 
 <br>
+
+
+## 📦 **Installation**
+
+General installation steps are as follows:
+
+1. Clone the repository
+2. open terminal and navigate to the project folder
+3. run 
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. Change directory to the src folder
+    ```bash
+    cd src
+    ```
+6. Migrate the database
+    ```bash
+    python manage.py migrate
+    ```
+7. Run the server
+    ```bash
+    python manage.py runserver
+    ```
+8. Open the browser and go to the following url
+    ```
+    http://127.0.0.1:8000/
+    ```
+9. locate the test file to upload in the [testdata folder](./testData/)
+
+10. Click on the `Choose file` button and select the testdata.zip file
+
+11. Click on the `Upload` button to upload the file
+
+> Note: If this is the first time running this project, it will need to download the models from the internet and install them do not worry this will be a one time process which will take some time to complete depending on your internet speed once this is complete it will begin to analyze the uploaded file and then you will be able to see the results.
+
+12. Once the analysis is complete you will be able to see the results on the screen.
+
+>Note: this may take a time to display depending on your system speed and the size of the uploaded file as all the images are reconfigured to webp format for faster loading and storage.
