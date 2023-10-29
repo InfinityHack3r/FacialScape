@@ -75,7 +75,7 @@ General installation steps are as follows:
     ```
 4. Change directory to the src folder
     ```bash
-    cd src
+    cd src/facialscape
     ```
 6. Migrate the database
     ```bash
