@@ -1,70 +1,128 @@
 # Logbook
 
-## 1. Planning/Design and Research
+## Week 1: Planning and Research
+**Date: 21/09/2023 - 27/09/2023**
+
+### 1.1 Planning and Research
 **Date: 21/09/2023**
 
-Today, I initiated the planning and research phase of the project. My primary focus was on understanding the scope of the project and delineating the essential tasks that need to be undertaken.
+- Initial exploration of project scope and essential tasks.
+- Preliminary examination of the dataset.
+- Research on data visualization techniques.
 
-I began by examining the dataset that has been provided looking at the images. During this initial analysis, I started to conceptualize the kind of data that would be most pertinent to utilize for the project questions.
+### 1.2 Further Research
+**Date: 23/09/2023**
 
-Furthermore, I delved into exploring various data visualization techniques. I am in the process of identifying the most effective visualization methods to represent the data accurately and insightfully. This involves considering different types of diagrams and charts that would best illustrate the data patterns and trends.
+- Continued research on data visualization techniques.
+- Started looking into various frameworks and libraries.
 
-As I move forward, I aim to finalize the selection of data and visualization techniques.
+### 1.3 Finalizing Research
+**Date: 27/09/2023**
 
-### Frameworks and Libraries
+- Wrapped up research phase.
+- Prepared for discussing the project with stakeholders.
 
-I have decided to use the following frameworks and libraries for the project:
+## Week 2: Discussion on the Project
+**Date: 28/09/2023 - 04/10/2023**
 
-- **Python**: I will be using Python as the primary programming language for the project.
-- **OpenCV**: I will be using OpenCV for image processing and feature extraction.
+### 2.1 Family Discussion on the Project
+**Date: 28/09/2023**
 
-Furthermore, I will be using the following frameworks and libraries for the web application:
+- Presented project idea and scope to family.
+- Received valuable feedback and suggestions.
 
-- **Django**: I will be using Django to create the data visualization web application and interactive dashboards to upload new data for analysis.
-- **Docker**: I will be using Docker to containerize the web application and interactive dashboards.
+### 2.2 Feedback Evaluation
+**Date: 30/09/2023**
 
-### Data Visualization Techniques
+- Evaluated feedback and suggestions.
+- Incorporated viable ideas into the project plan.
 
-I have decided to use the following data visualization techniques for the project:
+### 2.3 Preparation for Library Selection
+**Date: 04/10/2023**
 
-- **Histograms/Density plots**: To visualize the distribution of sizes and separations.
-- **Heatmaps**: To visualize the common positions for different features.
-- **Box plots/ Violin plots**: To visualize the distribution and variability of the data.
-- **Bar Charts/Pie Charts**: To visualize the frequency of each facial expression in the dataset.
-- **Gallery View**: To showcase and visualize some of the doppelgänger pairs identified.
+- Prepared for the selection of libraries.
+- Reviewed project requirements and goals.
 
-## 2. Family Discussion on the Project
-**Date: 23-24/09/2023**
+## Week 3: Confirming What Library I'm Using
+**Date: 05/10/2023 - 11/10/2023**
 
-Today, I had an insightful discussion with my family about my ongoing project. I delved into the project's idea, its broad scope and the data visualization techniques I intend to deploy. As always, my family's perspective brought forward some valuable feedback and intriguing suggestions.
+### 3.1 Library Selection
+**Date: 05/10/2023**
 
-### Feedback & Suggestions:
+- Selected the necessary libraries for the project.
+- Decided on Django for web application development.
 
-- **Height Measurement Idea**: They proposed an intriguing method to estimate a person's height from a photograph. By leveraging the size of a person's head (from chin to top) and considering variables like age and gender, one might be able to deduce body proportions. This concept is substantiated by resources on [body proportions](https://hpc.anatomy4sculptors.com/). While it's fascinating, I might not be incorporating this in the current project. However, I'm certainly interested in the concept for future exploration.
+### 3.2 Library Setup
+**Date: 07/10/2023**
 
-- **Face Proportions**: Another suggestion revolved around the measurement of face proportions. This is another area I'm keen to delve into in subsequent projects.
+- Set up the development environment with the selected libraries.
+- Prepared for testing the library functionalities.
 
-- **Pain Scale**: as my mother and brother are nurses by profession, they suggested the incorporation of a pain scale. This would involve analyzing facial expressions to determine the level of pain a person is experiencing. This is a fascinating concept, and I'm keen to explore it.
+### 3.3 Library Functionality Confirmation
+**Date: 11/10/2023**
 
-### Discussions with My Brother:
+- Confirmed the functionalities of the selected libraries.
+- Prepared for the next phase of the project.
 
-On the technical front, my brother and I discussed the possibility of him assisting me in creating a training set for the detection system. This would necessitate manually annotating the images in the dataset. considering the use of a custom detection model based on YOLOv8. By training this model on a specific portion of my dataset, I aim to enhance feature detection. Notably, this method might enable the identification of unique features not found in other pre-trained datasets. Nonetheless, there are challenges to consider. The training process for such a model requires significant time and resources. Given the project's timeline, I'm uncertain about achieving this without additional help, particularly in developing a robust training set for the detection system.
+## Week 4: Confirming the Workings of the Library
+**Date: 12/10/2023 - 18/10/2023**
 
-## 3. Training Data Selection
-**Date: 25/09/2023**
+### 4.1 Library Exploration
+**Date: 12/10/2023**
 
-Today, I commenced the data selection process for the project. My first task was to discern the data that resonates best with the project's objectives. Given that our total dataset comprises of [100 images spanning various scenarios], I meticulously examined it to cherry-pick the images that align most closely with the project.
+- Dived deeper into library functionalities.
+- Explored documentation and tutorials.
 
-To facilitate this, I devised a random [sampling tool](../tools/randomImages.py) that would earmark approximately 100 images from the dataset. These images will serve as the foundation for training, validating and testing the YOLOv8 model. Given the project's evolving nature, I'm keeping options open to expand this image set in the future.
+### 4.2 Library Testing
+**Date: 14/10/2023**
 
-The next phase involves annotation. I've zeroed in on [Roboflow](https://roboflow.com/) for this task. With Roboflow, I can adeptly annotate these images and more crucially, export these annotations in the YOLO-specific format. I will get my family into assisting me with this task. I'm confident that with their help, I can complete this process in a timely manner.
+- Conducted tests to confirm library workings.
+- Identified any limitations or issues.
 
-I'm currently weighing the pros and cons of training venues. While Google Colab emerged as an initial option, I'm wary of its limited resource time limits. I'm toying with the idea of harnessing the power of my local GPU (RTX 3090) for this task. For context, my machine is equipped with [448 GB RAM, Intel Xeon E5-2667 v3 @ 3.20 GHz (2 Processors)]. In the coming days, I'll be dissecting the cost-benefit analysis of training on Google Colab vis-à-vis my local machine and or buying a pro membership for google Colab to remove the time limits.
+### 4.3 Final Confirmation
+**Date: 18/10/2023**
 
-Should neither prove feasible, I'm considering using a pretrained model from hugging face this option would be a devestating blow to the project's scope and objectives. Nonetheless, I'm keeping this option open as a last resort.
+- Final confirmation of library workings.
+- Prepared for coding the interoperability.
 
+## Week 5: Start Coding the Interoperability
+**Date: 19/10/2023 - 25/10/2023**
 
-## 4. Training Data Annotation
-**Date: 2/10/2023**
+### 5.1 Coding Initiation
+**Date: 19/10/2023**
 
-Today, I commenced the data annotation process for the project. I've decided to use  for this task. With Roboflow, I can adeptly annotate these images and more crucially, export these annotations in the YOLO-specific format. I will get my family into assisting me with this task. I'm confident that with their help, I can complete this process in a timely manner.
+- Initiated coding for interoperability.
+- Setup necessary configurations.
+
+### 5.2 Coding Progress
+**Date: 21/10/2023**
+
+- Continued coding.
+- Tested initial setups.
+
+### 5.3 Coding Wrap-up
+**Date: 25/10/2023**
+
+- Wrapped up coding for interoperability.
+- Prepared for testing phase.
+
+## Week 6: Testing and Finalization
+**Date: 26/10/2023 - 29/10/2023**
+
+### 6.1 Testing Initiation
+**Date: 26/10/2023**
+
+- Initiated testing for interoperability.
+- Identified bugs and issues.
+
+### 6.2 Bug Fixes and Adjustments
+**Date: 28/10/2023**
+
+- Fixed identified bugs.
+- Made necessary adjustments.
+
+### 6.3 Finalization
+**Date: 29/10/2023**
+
+- Finalized the interoperability code.
+- Prepared for integration with other project components.
