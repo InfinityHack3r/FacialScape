@@ -6,7 +6,8 @@
 
 
 ## **Introduction**
-This project delves into the intricate world of image analytics, focusing on extracting valuable insights from a dataset of facial images. From understanding facial features and expressions to demographics and hair patterns, FacialScape aims to uncover the stories these images tell. A unique challenge is the identification of doppelgängers within the dataset and analyzing their striking similarities. The culmination of this analysis will be showcased in an interactive web application, complete with dashboards that allow for new data uploads and real-time analysis.
+FacialScape delves into the rich domain of image analytics, with a spotlight on extracting profound insights from a facial image dataset. This venture encompasses the exploration of facial features and expressions, along with digging into demographic dimensions.
+
 
 **Project name:** [FacialScape](https://github.com/InfinityHack3r/FacialScape/)
 
@@ -19,53 +20,32 @@ This project delves into the intricate world of image analytics, focusing on ext
 
 - [OpenCV](https://opencv.org/)
 
-- [Docker](https://www.docker.com/)
+- [Deepface](https://github.com/serengil/deepface)
 
-- [YOLOv8](https://docs.ultralytics.com/)
-
-- [labelImg](https://github.com/HumanSignal/label-studio)
+- [Plotly](https://plotly.com/)
 
 <br>
 
 ## **Description**
 
-FacialScape illuminates the intricate details hidden within facial images. At its core, this project is driven by the desire to extract and interpret the myriad of stories that every face narrates.
+**FacialScape** unveils the nuanced details encapsulated within facial imagery. Rooted in the passion to unravel and interpret the multitude of narratives each face portrays, this project stands as a testament to the power of facial analysis.
 
-**Understanding Facial Features:** FacialScape dives into these features, using the a custom trained detection system YOLOv8 (You Only Look Once) to understand and categorize them, revealing patterns and insights that might otherwise go unnoticed.
+- **Understanding Facial Features:** FacialScape ventures into the realm of facial features, categorizing them to unveil patterns and insights that might otherwise remain obscured.
 
-**Expressions & Emotions:** Beyond the static features, our faces are canvases of emotions. 
+- **Expressions & Emotions:** Our visages are the canvases of emotions. Exploring beyond static features, this project delves into the dynamic expressions that paint our faces.
 
-**Demographics & Beyond:** gender and ethnicity - these are just the surface-level demographics. FacialScape delves deeper, aiming to correlate facial features with broader demographic trends, possibly uncovering new insights about population subsets.
-
-**Hair Patterns & Styles:** Hair, often a canvas of personal expression, is another focal point. From analyzing hair colors and styles to understanding patterns of hair loss or graying, FacialScape provides a comprehensive analysis.
-
-**The Doppelgänger:** Among the most intriguing aspects is the quest to identify doppelgängers. By comparing facial features across the dataset, the project aims to find individuals with striking resemblances, a task that combines the challenges of feature recognition and large-scale data comparison.
-
-**Interactive Web Application:** The insights derived are not just confined to research papers or static reports. FacialScape's findings will be dynamically showcased in an interactive web application. This platform will not only display the results but also offer users the ability to upload new data, facilitating real-time analysis and insights generation.
-
-By weaving together these elements, FacialScape promises to be more than just another analytics project. It's a journey into the heart of human identity, as told through the faces we wear.
+- **Demographics & Beyond:** Gender and ethnicity represent just the tip of the demographic iceberg. FacialScape aims to correlate facial features with broader demographic trends.
 
 ## 🚀 Features
 
-**Feature Recognition:** Advanced algorithms to detect and categorize facial features.
+- **Feature Recognition:** Detection and categorization of facial features.
+- **Emotion Analysis:** Interpretation of facial expressions to grasp the emotions conveyed.
+- **Demographic Insights:** Analytical correlations of facial features with demographics like gender and ethnicity.
+- **Data Visualization:** Graphic elucidation of analysis outcomes through charts and other visualization aids for enhanced clarity.
 
-**Emotion Analysis:** Real-time detection and interpretation of facial expressions to understand conveyed emotions.
+## Purpose
 
-**Demographic Insights:** Analysis to correlate facial features with demographics like gender and ethnicity.
-
-**Hair Analytics:** Comprehensive examination of hair colors.
-
-**Doppelgänger Detection:** Feature comparison across the dataset to identify individuals with striking resemblances.
-
-**Interactive Dashboard:** A user-friendly web application showcasing dynamic results, with options for users to upload new data for instant analysis.
-
-**Data Visualization:** Graphical representation of analysis results, using charts, heatmaps and other visualization tools for better clarity.
-
-**User Profiles:** Option for users to create profiles to save their data.
-
-## What is this for?
-
-This project serves as the Capstone for the "Software Technology 1 (4483)" course at the University of Canberra. The primary objective is for students to deeply analyze a chosen dataset and coherently present their findings. By employing analytical tools they will extract and process the data, transforming it into actionable insights. This endeavor evaluates not just their technical expertise, but also their capacity to convert raw data into valuable information, exemplifying the practical application of the skills cultivated throughout the course.
+This initiative serves as the Capstone project for the "Software Technology 1 (4483)" course at the University of Canberra. The prime goal is to enable students to meticulously analyze a chosen dataset and coherently articulate their findings. Leveraging analytical tools, students will distill and process the data, metamorphosing it into actionable insights. This venture evaluates not merely their technical acumen but also their aptitude to transmute raw data into invaluable information, epitomizing the practical application of the competencies honed throughout the course.
 
 <br>
 
@@ -81,13 +61,6 @@ This project serves as the Capstone for the "Software Technology 1 (4483)" cours
  - 🚩 First Phase
 
 
-
-**Documentation:**
-- [Todo List](./doc/todo.md): Check to see the current workings and future plans.
-- [Change Log](./doc/changelog.md): Stay updated with the latest changes and improvements in the project.
-
-
-<br>
 
 
 ## 📦 **Installation**
